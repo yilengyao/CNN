@@ -1,0 +1,26 @@
+---
+version: '3.7'
+
+services:
+
+  ############ CNN Application ############
+  cnn_application:
+    build:
+      contest: .
+      dockerfile: CNN_Application/dockerfile
+    image: cnn-application
+    container_name: cnn-application
+    extra_hosts:
+      - "localhost:192.168.65.2"
+    ports:
+      - 8080:8080
+      - 6565:6565
+    environment:
+      - AWS_ACCESS_KEY_ID=anykey
+      - AWS_SECRET_ACCESS_KEY=anysecret
+      - AWS_REGION=us-east-1
+    volumes:
+      - ${CNN_APPLICATION_PATH}:/app
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./local/root:/root
+    tty: true
