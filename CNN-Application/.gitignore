@@ -1,0 +1,14 @@
+__pycache__
+# Local environment files
+/.env
+/local/root/.artifactory_credentials
+/local/root/.ash_history
+
+# Gradle and Maven directories
+/local/root/.gradle/
+/local/root/.m2/
+
+# H2 database files
+/local/root/*.mv.db
+
+**/.DS_Store
