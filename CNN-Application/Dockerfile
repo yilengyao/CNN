@@ -1,4 +1,4 @@
-FROM amazoncorretto:17-alpine-full
+FROM amazoncorretto:22-alpine-full
 RUN ["apk", "add", "bash"]
 RUN ["apk", "add", "docker"]
 RUN ["apk", "add", "gradle"]

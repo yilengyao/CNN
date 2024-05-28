@@ -1,13 +1,11 @@
 ---
-version: '3.7'
-
 services:
 
   ############ CNN Application ############
   cnn_application:
     build:
-      contest: .
-      dockerfile: CNN_Application/dockerfile
+      context: .
+      dockerfile: CNN-Application/dockerfile
     image: cnn-application
     container_name: cnn-application
     extra_hosts:
